@@ -29,7 +29,7 @@
 <p align="left">
 <a href="https://www.linkedin.com/in/vedant-jadhav-566533273?" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="vedant-jadhav" height="30" width="40" /></a>
 <a href="https://instagram.com/vedant__701" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="vedant__701" height="30" width="40" /></a>
-<a href="https://www.youtube.com/c/deadnox7" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg" alt="Deadnox7" height="30" width="40" /></a>
+<a href="https://youtube.com/@deadnox7?si=UbAqpbI9XSSJIH2A" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg" alt="Deadnox7" height="30" width="40" /></a>
 </p>
 
 <h3 align="left">Languages and Tools:</h3>
