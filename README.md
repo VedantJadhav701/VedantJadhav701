@@ -5,13 +5,13 @@
 
 <p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=vedantjadhav701" alt="vedantjadhav701" /></a> </p>
 
-- 🔭 I’m currently working on [Crop and Fertilizer Recommendation System](https://agripredictor.streamlit.app/)
+- 🔭 I'm currently working on [Crop and Fertilizer Recommendation System](https://agripredictor.streamlit.app/)
 
-- 🌱 I’m currently learning **Mathematics for ML & Data Science ,Deep Learning with TensorFlow**
+- 🌱 I'm currently learning **Mathematics for ML & Data Science ,Deep Learning with TensorFlow**
 
-- 👯 I’m looking to collaborate on [Study Hub Platform for IIT Indore](https://studyhubiiti.netlify.app/)
+- 👯 I'm looking to collaborate on [Study Hub Platform for IIT Indore](https://studyhubiiti.netlify.app/)
 
-- 🤝 I’m looking for help with [Vehicle Rental App (RentX)](https://rentxx.netlify.app/)
+- 🤝 I'm looking for help with [Vehicle Rental App (RentX)](https://rentxx.netlify.app/)
 
 - 👨‍💻 All of my projects are available at [https://vedantjadhav.netlify.app/](https://vedantjadhav.netlify.app/)
 
@@ -19,7 +19,7 @@
 
 - 💬 Ask me about **React, Streamlit, Scikit-learn, ML Deployment**
 
-- 📫 How to reach me **Email: vedantjadhav1414@gmail.com ,Phone: +91 7410036328**
+- 📫 How to reach me **Email: [vedantjadhav1414@gmail.com](mailto:vedantjadhav1414@gmail.com) ,Phone: +91 7410036328**
 
 - 📄 Know about my experiences [https://drive.google.com/file/d/1HcC8LOquF6nbObKdCFiiyCH1ZKckaApL/view](https://drive.google.com/file/d/1HcC8LOquF6nbObKdCFiiyCH1ZKckaApL/view)
 
