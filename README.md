@@ -245,9 +245,9 @@ class VedantJadhav:
 
 | Degree | Institute | Score | Year |
 |--------|-----------|-------|------|
-| **B.Tech. (AI & ML)** | Pimpri Chinchwad University, Pune | 7.63 CGPA | 2023-27 |
-| **Senior Secondary (HSC)** | HSC Board | 65% | 2023 |
-| **Secondary (SSC)** | SSC Board | 82% | 2021 |
+| **B.Tech. (AI & ML)** | Pimpri Chinchwad University, Pune | 2023-27 |
+| **Senior Secondary (HSC)** | 2023 |
+| **Secondary (SSC)**  2021 |
 
 ### 🏅 Professional Certifications
 - Deep Learning Specialization – DeepLearning.AI
