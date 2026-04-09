@@ -244,7 +244,7 @@ class VedantJadhav:
 ## 🎓 Education & Certifications
 
 | Degree | Institute | Year |
-|--------|-----------|-------|------|
+|--------|-----------|-------|
 | **B.Tech. (AI & ML)** | Pimpri Chinchwad University, Pune | 2023-27 |
 
 ### 🏅 Professional Certifications
