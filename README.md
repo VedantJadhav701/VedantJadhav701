@@ -21,7 +21,6 @@ class VedantJadhav:
     def __init__(self):
         self.education = "B.Tech. Computer Science (AI & ML)"
         self.university = "Pimpri Chinchwad University, Pune"
-        self.cgpa = 7.63
         self.location = "Pune, Maharashtra, India"
         
     def expertise(self):
