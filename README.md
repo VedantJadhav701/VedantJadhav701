@@ -2,10 +2,11 @@
 
 <div align="center">
 
-### AI/ML Research Engineer • Scientific Machine Learning • Physical Intelligence • Production AI Systems
+### AI/ML Research Engineer • Scientific ML • Physical Intelligence • Production AI Systems
 
 <br>
 
+[![Portfolio](https://img.shields.io/badge/Portfolio-Website-0A66C2?style=for-the-badge&logo=google-chrome&logoColor=white)](https://vedantjadhav-ai.vercel.app)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Vedant%20Jadhav-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/vedantjadhav-ai)
 [![GitHub](https://img.shields.io/badge/GitHub-VedantJadhav701-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/VedantJadhav701)
 [![Email](https://img.shields.io/badge/Email-Contact-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:vedantjadhav1414@gmail.com)
@@ -14,46 +15,20 @@
 
 ---
 
-# About
+# About Me
 
-Final-year B.Tech. student in Computer Science (Artificial Intelligence & Machine Learning) at Pimpri Chinchwad University, Pune.
+Final-year B.Tech. student specializing in Artificial Intelligence & Machine Learning at Pimpri Chinchwad University, Pune.
 
 Focused on building production-grade AI systems and applying machine learning to scientific, industrial, medical, and embodied environments.
 
-### Areas of Interest
-
+### Core Areas
 - Scientific Machine Learning
 - Physical Intelligence & Robotics
-- Large Language Models & RAG Systems
+- Agentic AI Systems
+- LLMs & Retrieval-Augmented Generation
 - Medical AI & Clinical Reasoning
 - Production ML Infrastructure
 - Edge AI & Real-Time Inference
-
----
-
-# Professional Experience
-
-## AI Developer Intern — DPulseAI Pvt. Ltd.
-**Oct 2025 – Apr 2026 | Pune, India**
-
-- Engineered production LLM and RAG systems for enterprise workflows
-- Built scalable FastAPI inference services and Dockerized deployment pipelines
-- Implemented CI/CD automation, monitoring, and optimization workflows
-- Improved retrieval quality and reduced inference latency for production systems
-
-### Key Outcomes
-- 35% improvement in retrieval accuracy
-- 45% reduction in inference latency
-- Deployment cycles reduced to under 10 minutes
-
----
-
-## AI & ML Intern — Tamizhan Skills
-**Apr 2025 – May 2025 | Pune, India**
-
-- Developed NLP automation systems using AWS Lambda and Streamlit
-- Built text summarization and classification workflows
-- Improved operational throughput through automation pipelines
 
 ---
 
@@ -62,183 +37,138 @@ Focused on building production-grade AI systems and applying machine learning to
 ## Published Research
 
 ### Ensemble and Hybrid ML Approaches for Renewable Energy Forecasting
-**AIP Publishing | 2025**
+**AIP Publishing • Scopus Indexed • 2025**
 
 - Best Research Paper Award — ICCTVB-25
-- Scopus Indexed Publication
-- Focused on ensemble learning methods for renewable energy forecasting
+- Ensemble learning approaches for renewable energy forecasting
+- DOI: https://doi.org/10.5281/zenodo.20040403
 
 ---
 
-## Ongoing Research
+## Preprints & Ongoing Research
 
-### Physics-Informed Gaussian Process Modeling for Carnallite Electrolysis Optimization
+### RecursiveMAS — Recursive Multi-Agent Latent Coordination Framework
+- Embodied task optimization and recursive agent coordination
+- DOI: https://doi.org/10.5281/zenodo.20097645
 
-Research involving:
-- Physics-informed machine learning
-- Thermodynamic optimization
-- Industrial process intelligence
-- Electrochemical system modeling
-
----
+### ML Models to Predict Levulinic Acid Production from Sugarcane Bagasse
+- Scientific ML for biomass and chemical optimization
+- DOI: https://doi.org/10.5281/zenodo.20041243
 
 ### Small Language Models for Clinical Reasoning & Medical Decision Alignment
+- Clinical reasoning reliability in compact medical LLMs
+- Models: LLaMA, BioMistral, Med42v2, Qwen
 
-Research focused on:
-- Clinical reasoning reliability
-- Semantic consistency evaluation
-- Medical deployment readiness
+### Current Research Focus
+- Physical Intelligence & Embodied AI
+- Agentic LLM Systems
 - Long-context reasoning systems
+- Scientific machine learning
+
+---
+
+# Professional Experience
+
+## AI Developer Intern — DPulseAI Pvt. Ltd.
+**Oct 2025 – Apr 2026 | Pune, India**
+
+- Built production-grade LLM and RAG systems for enterprise AI workflows
+- Improved retrieval accuracy by 35% and reduced inference latency by 45%
+- Architected Dockerized inference pipelines with CI/CD and canary deployments
+- Implemented quantization-based optimization and drift monitoring pipelines
 
 ---
 
 # Featured Projects
 
-## ILM — Institutional Language Model
-### Healthcare AI Infrastructure Platform
+## Developer Code Intelligence Agent
+[GitHub](https://github.com/VedantJadhav701)
 
-Enterprise-grade healthcare intelligence platform designed for hospital environments.
-
-### Core Features
-- Retrieval-Augmented Generation (RAG)
-- Hospital document intelligence
-- Role-based access control
-- Clinical reasoning workflows
-- Monitoring and drift detection
-
-### Stack
-`FastAPI` `Transformers` `Docker` `Vector Databases`
+- Fully offline local AI coding agent powered by Ollama
+- Autonomous debugging, patch generation, and validation workflows
+- Zero API-cost local inference architecture
 
 ---
 
-## EcoGuard — AI Carbon Intelligence Platform
-### Winner — Code4Society Hackathon 2026
+## Antigravity Runtime — Autonomous Local Execution Platform
+[GitHub](https://github.com/VedantJadhav701/antigravity-runtime)
 
-Multimodal AI platform for carbon footprint analysis and sustainability intelligence.
-
-### Capabilities
-- Real-time carbon tracking
-- Environmental analytics
-- IoT-integrated intelligence
-- Computer vision-based monitoring
-- Sustainability simulation systems
+- Production-grade AI execution runtime
+- Deterministic orchestration and self-healing systems
+- Integrity validation and audit logging infrastructure
 
 ---
 
-## Autonomous Cleaning Robot Vision System
-### Physical AI & Edge Inference
+## LLM KV Optimizer
+[GitHub](https://github.com/VedantJadhav701)
 
-Real-time robotics perception system built using lightweight computer vision architectures.
-
-### Highlights
-- YOLOv8 Nano deployment
-- Real-time debris detection
-- Edge inference optimization
-- Low-latency GPU inference
-- Robotics perception integration
+- Modular KV cache quantization framework
+- Reduced LLM memory footprint by up to 23x
+- Optimized for consumer-grade hardware deployment
 
 ---
 
-## Robotics Action Prediction System
+## NVIDIA PhysicalAI — Robotics Action Prediction
+[GitHub](https://github.com/VedantJadhav701)
 
-Sequence modeling framework for robotic action prediction.
-
-### Components
-- LSTM-based temporal prediction
-- FastAPI inference services
-- Dockerized deployment
-- Monitoring infrastructure
-- Stability-aware preprocessing pipeline
+- LSTM-based robotics action prediction system
+- Trained on NVIDIA PhysicalAI datasets
+- End-to-end PyTorch training and inference pipeline
 
 ---
 
-## LLM Reasoning Evaluation Pipeline
-### NVIDIA Nemotron Evaluation Framework
+## Research Jarvis — Agentic AI Research Assistant
+[GitHub](https://github.com/VedantJadhav701)
 
-Benchmarking infrastructure for reasoning-focused language models.
+- Hybrid RAG research engine with real-time arXiv monitoring
+- Precision-focused answers with technical citation workflows
+- Local document ingestion and retrieval infrastructure
 
-### Features
-- Multi-hop reasoning evaluation
-- Automated benchmarking workflows
-- MLflow experiment tracking
-- CI/CD-integrated testing
-- Latency and reasoning analysis
+---
+
+## EcoGuard — AI Waste Management & Carbon Tracking
+[GitHub](https://github.com/VedantJadhav701)
+
+- AI-powered waste intelligence platform
+- Automated MLOps retraining and deployment workflows
+- Sustainability analytics and carbon tracking
+
+---
+
+## Quantum Research & Risk Engine
+[GitHub](https://github.com/VedantJadhav701)
+
+- Regime-aware volatility modeling framework
+- Monte Carlo risk simulation engine
+- ML-based market state detection system
 
 ---
 
 # Technical Skills
 
 ## Languages
-
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
 ![C++](https://img.shields.io/badge/C++-00599C?style=flat-square&logo=cplusplus&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
 ![SQL](https://img.shields.io/badge/SQL-CC2927?style=flat-square&logo=mysql&logoColor=white)
 
-## AI & Machine Learning
+---
 
+## AI / ML
 ![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white)
 ![HuggingFace](https://img.shields.io/badge/HuggingFace-FFD21E?style=flat-square&logo=huggingface&logoColor=black)
-![Scikit-learn](https://img.shields.io/badge/Scikit--learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white)
-![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square&logoColor=white)
-
-## Infrastructure & Deployment
-
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square)
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
+
+---
+
+## MLOps & Infrastructure
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
 ![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white)
-![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazon-aws&logoColor=FF9900)
-![Google Cloud](https://img.shields.io/badge/Google_Cloud-4285F4?style=flat-square&logo=google-cloud&logoColor=white)
-
----
-
-# Achievements
-
-- Best Research Paper Award — ICCTVB-25
-- 1st Place — Code4Society Hackathon 2026
-- 1st Place — CodeApex 24-Hour Hackathon
-- 3rd Place — National DevCraft Hackathon, IIT Indore
-- 3rd Place — National AI Hackathon, IIT Indore
-- National Finalist — Table Tennis, IIM Indore
-
----
-
-# Leadership & Community
-
-- Core Coordinator — PCU Sports Club
-- Placement Coordinator — Career Development Cell
-- Core Team Member — R&D Club
-- Team Leader — Smart India Hackathon 2025
-- AI/ML Technical Speaker
-- Hackathon Mentor
-
----
-
-# Education
-
-## Pimpri Chinchwad University
-### B.Tech. — Computer Science (Artificial Intelligence & Machine Learning)
-**2023 – 2027**
-
----
-
-# Certifications
-
-- Deep Learning Specialization — DeepLearning.AI
-- TensorFlow for AI/ML — DeepLearning.AI
-- Supervised Machine Learning — Stanford University
-- Mathematics for Machine Learning & Data Science — DeepLearning.AI
-
----
-
-# Current Focus
-
-- Physical Intelligence & Embodied AI
-- Scientific Machine Learning
-- Medical AI Alignment
-- Long-Context Reasoning Systems
-- Production AI Infrastructure
+![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazonaws&logoColor=white)
+![Pinecone](https://img.shields.io/badge/Pinecone-000000?style=flat-square)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white)
 
 ---
 
@@ -256,12 +186,39 @@ Benchmarking infrastructure for reasoning-focused language models.
 
 ---
 
+# Achievements
+
+- Best Research Paper Award — ICCTVB-25
+- 1st Place — Code4Society Hackathon 2026
+- 1st Place — CodeApex 24-Hour Hackathon
+- 3rd Place — National DevCraft Hackathon, IIT Indore
+- 3rd Place — National AI Hackathon, IIT Indore
+- National Finalist — Table Tennis, IIM Indore
+
+---
+
+# Education
+
+## Pimpri Chinchwad University
+### B.Tech. — Computer Science (AI & ML)
+**2023 – 2027 • CGPA: 8.10**
+
+---
+
+# Certifications
+
+- Deep Learning Specialization — DeepLearning.AI
+- Supervised Machine Learning — Stanford University
+- Mathematics for Machine Learning & Data Science — DeepLearning.AI
+
+---
+
 # Connect
 
-- Email: **vedantjadhav1414@gmail.com**
-- LinkedIn: **linkedin.com/in/vedantjadhav-ai**
-- GitHub: **github.com/VedantJadhav701**
-- Location: **Pune, Maharashtra, India**
+- Portfolio: https://vedantjadhav-ai.vercel.app
+- LinkedIn: https://linkedin.com/in/vedantjadhav-ai
+- GitHub: https://github.com/VedantJadhav701
+- Email: vedantjadhav1414@gmail.com
 
 ---
 
