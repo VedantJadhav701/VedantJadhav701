@@ -61,6 +61,7 @@ vedant = {
 <div align="center">
 
 [![GitHub Streak](https://streak-stats.demolab.com/?user=VedantJadhav701&theme=tokyonight&hide_border=true&date_format=j%20M%5B%20Y%5D)](https://git.io/streak-stats)
+[![ GitHub stats](https://github-readme-stats.vercel.app/api?username=VedantJadhav701)](https://github.com/anuraghazra/github-readme-stats)
 
 </div>
 ---
