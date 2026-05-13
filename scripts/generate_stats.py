@@ -176,15 +176,15 @@ def lang_bar_svg(langs, x, y, w, h=10):
 
 def build_svg(stats):
     s = stats
-    W, H = 520, 450
-    PAD = 20
+    W, H = 600, 520
+    PAD = 25
 
     # contribution grid (mini) — last 26 weeks × 7 days
     weeks_data = s["raw_weeks"][-26:]
-    cell = 7
+    cell = 8
     gap  = 2
     grid_x = PAD
-    grid_y = 340
+    grid_y = 390
     levels = ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353"]
 
     grid_svg = []
@@ -204,32 +204,32 @@ def build_svg(stats):
 
     # language bar
     langs = s["languages"]
-    lb = lang_bar_svg(langs, PAD, 268, W - PAD * 2, 12)
+    lb = lang_bar_svg(langs, PAD, 288, W - PAD * 2, 14)
 
     # legend dots - fixed positioning to avoid overlap
     legend_parts = []
     
     # First row - 3 languages
-    legend_y = 265
+    legend_y = 318
     for i, l in enumerate(langs[:3]):
-        lx = PAD + (i * 155)
+        lx = PAD + (i * 190)
         legend_parts.append(
-            f'<circle cx="{lx}" cy="{legend_y}" r="5" fill="{l["color"]}"/>'
-            f'<text x="{lx + 12}" y="{legend_y - 2}" font-size="11" font-weight="600" fill="#e6edf3">'
+            f'<circle cx="{lx}" cy="{legend_y}" r="6" fill="{l["color"]}"/>'
+            f'<text x="{lx + 14}" y="{legend_y - 2}" font-size="12" font-weight="600" fill="#e6edf3">'
             f'{l["name"]}</text>'
-            f'<text x="{lx + 12}" y="{legend_y + 14}" font-size="10" fill="#58a6ff" font-weight="600">'
+            f'<text x="{lx + 14}" y="{legend_y + 16}" font-size="11" fill="#58a6ff" font-weight="600">'
             f'{l["pct"]}%</text>'
         )
     
     # Second row - remaining 3 languages
-    legend_y_2 = 295
+    legend_y_2 = 355
     for i, l in enumerate(langs[3:6]):
-        lx = PAD + (i * 155)
+        lx = PAD + (i * 190)
         legend_parts.append(
-            f'<circle cx="{lx}" cy="{legend_y_2}" r="5" fill="{l["color"]}"/>'
-            f'<text x="{lx + 12}" y="{legend_y_2 - 2}" font-size="11" font-weight="600" fill="#e6edf3">'
+            f'<circle cx="{lx}" cy="{legend_y_2}" r="6" fill="{l["color"]}"/>'
+            f'<text x="{lx + 14}" y="{legend_y_2 - 2}" font-size="12" font-weight="600" fill="#e6edf3">'
             f'{l["name"]}</text>'
-            f'<text x="{lx + 12}" y="{legend_y_2 + 14}" font-size="10" fill="#58a6ff" font-weight="600">'
+            f'<text x="{lx + 14}" y="{legend_y_2 + 16}" font-size="11" fill="#58a6ff" font-weight="600">'
             f'{l["pct"]}%</text>'
         )
 
@@ -272,61 +272,63 @@ def build_svg(stats):
   <!-- Stat boxes - Row 1 -->
   <!-- Stars -->
   <g>
-    <rect x="{PAD}" y="55" width="105" height="70" rx="10" fill="#1c2128" stroke="#21262d" stroke-width="1" filter="url(#shadow)"/>
-    <text x="{PAD + 52}" y="82" font-family="&apos;Segoe UI&apos;,system-ui,sans-serif"
-          font-size="20" font-weight="700" fill="#f0c040" text-anchor="middle">⭐</text>
-    <text x="{PAD + 52}" y="102" font-family="&apos;Segoe UI&apos;,system-ui,sans-serif"
-          font-size="22" font-weight="700" fill="#f0c040" text-anchor="middle">{fmt(s["total_stars"])}</text>
-    <text x="{PAD + 52}" y="118" font-family="&apos;Segoe UI&apos;,system-ui,sans-serif"
-          font-size="10" fill="#8b949e" text-anchor="middle">Stars</text>
+    <rect x="{PAD}" y="55" width="120" height="80" rx="10" fill="#1c2128" stroke="#21262d" stroke-width="1"/>
+    <text x="{PAD + 60}" y="85" font-family="&apos;Segoe UI&apos;,system-ui,sans-serif"
+          font-size="22" font-weight="700" fill="#f0c040" text-anchor="middle">⭐</text>
+    <text x="{PAD + 60}" y="108" font-family="&apos;Segoe UI&apos;,system-ui,sans-serif"
+          font-size="24" font-weight="700" fill="#f0c040" text-anchor="middle">{fmt(s["total_stars"])}</text>
+    <text x="{PAD + 60}" y="125" font-family="&apos;Segoe UI&apos;,system-ui,sans-serif"
+          font-size="11" fill="#8b949e" text-anchor="middle">Stars</text>
   </g>
 
   <!-- Commits -->
   <g>
-    <rect x="{PAD + 115}" y="55" width="105" height="70" rx="10" fill="#1c2128" stroke="#21262d" stroke-width="1"/>
-    <text x="{PAD + 167}" y="82" font-family="&apos;Segoe UI&apos;,system-ui,sans-serif"
-          font-size="20" font-weight="700" fill="#58a6ff" text-anchor="middle">💻</text>
-    <text x="{PAD + 167}" y="102" font-family="&apos;Segoe UI&apos;,system-ui,sans-serif"
-          font-size="22" font-weight="700" fill="#58a6ff" text-anchor="middle">{fmt(s["total_commits"])}</text>
-    <text x="{PAD + 167}" y="118" font-family="&apos;Segoe UI&apos;,system-ui,sans-serif"
-          font-size="10" fill="#8b949e" text-anchor="middle">Commits</text>
+    <rect x="{PAD + 140}" y="55" width="120" height="80" rx="10" fill="#1c2128" stroke="#21262d" stroke-width="1"/>
+    <text x="{PAD + 200}" y="85" font-family="&apos;Segoe UI&apos;,system-ui,sans-serif"
+          font-size="22" font-weight="700" fill="#58a6ff" text-anchor="middle">💻</text>
+    <text x="{PAD + 200}" y="108" font-family="&apos;Segoe UI&apos;,system-ui,sans-serif"
+          font-size="24" font-weight="700" fill="#58a6ff" text-anchor="middle">{fmt(s["total_commits"])}</text>
+    <text x="{PAD + 200}" y="125" font-family="&apos;Segoe UI&apos;,system-ui,sans-serif"
+          font-size="11" fill="#8b949e" text-anchor="middle">Commits</text>
   </g>
 
   <!-- Contributions -->
   <g>
-    <rect x="{PAD + 230}" y="55" width="105" height="70" rx="10" fill="#1c2128" stroke="#21262d" stroke-width="1"/>
-    <text x="{PAD + 282}" y="82" font-family="&apos;Segoe UI&apos;,system-ui,sans-serif"
-          font-size="20" font-weight="700" fill="#3fb950" text-anchor="middle">📊</text>
-    <text x="{PAD + 282}" y="102" font-family="&apos;Segoe UI&apos;,system-ui,sans-serif"
-          font-size="22" font-weight="700" fill="#3fb950" text-anchor="middle">{fmt(s["total_contributions"])}</text>
-    <text x="{PAD + 282}" y="118" font-family="&apos;Segoe UI&apos;,system-ui,sans-serif"
-          font-size="10" fill="#8b949e" text-anchor="middle">Contributions</text>
+    <rect x="{PAD + 280}" y="55" width="120" height="80" rx="10" fill="#1c2128" stroke="#21262d" stroke-width="1"/>
+    <text x="{PAD + 340}" y="85" font-family="&apos;Segoe UI&apos;,system-ui,sans-serif"
+          font-size="22" font-weight="700" fill="#3fb950" text-anchor="middle">📊</text>
+    <text x="{PAD + 340}" y="108" font-family="&apos;Segoe UI&apos;,system-ui,sans-serif"
+          font-size="24" font-weight="700" fill="#3fb950" text-anchor="middle">{fmt(s["total_contributions"])}</text>
+    <text x="{PAD + 340}" y="125" font-family="&apos;Segoe UI&apos;,system-ui,sans-serif"
+          font-size="11" fill="#8b949e" text-anchor="middle">Contributions</text>
   </g>
 
   <!-- Current Streak (Full Width) -->
   <g>
-    <rect x="{PAD}" y="140" width="{W - PAD * 2}" height="80" rx="10" fill="#1c2128" stroke="#f85149" stroke-width="2"/>
-    <text x="{PAD + 15}" y="163" font-family="&apos;Segoe UI&apos;,system-ui,sans-serif"
-          font-size="12" font-weight="600" fill="#f85149">🔥 CURRENT STREAK</text>
-    <text x="{W - PAD - 15}" y="167" font-family="&apos;Segoe UI&apos;,system-ui,sans-serif"
-          font-size="32" font-weight="700" fill="#f85149" text-anchor="end">{s["streak"]["current"]}</text>
-    <text x="{W - PAD - 15}" y="187" font-family="&apos;Segoe UI&apos;,system-ui,sans-serif"
-          font-size="11" fill="#8b949e" text-anchor="end">days</text>
-    <text x="{PAD + 15}" y="185" font-family="&apos;Segoe UI&apos;,system-ui,sans-serif"
-          font-size="11" fill="#8b949e">{cur_dates}</text>
-    <text x="{PAD + 15}" y="210" font-family="&apos;Segoe UI&apos;,system-ui,sans-serif"
-          font-size="10" fill="#484f58">🏆 Longest: {s["streak"]["longest"]} days ({lng_dates})</text>
+    <rect x="{PAD}" y="150" width="{W - PAD * 2}" height="90" rx="10" fill="#1c2128" stroke="#f85149" stroke-width="2"/>
+    <text x="{PAD + 20}" y="175" font-family="&apos;Segoe UI&apos;,system-ui,sans-serif"
+          font-size="13" font-weight="600" fill="#f85149">🔥 CURRENT STREAK</text>
+    <text x="{W - PAD - 20}" y="180" font-family="&apos;Segoe UI&apos;,system-ui,sans-serif"
+          font-size="36" font-weight="700" fill="#f85149" text-anchor="end">{s["streak"]["current"]}</text>
+    <text x="{W - PAD - 20}" y="204" font-family="&apos;Segoe UI&apos;,system-ui,sans-serif"
+          font-size="12" fill="#8b949e" text-anchor="end">days</text>
+    <text x="{PAD + 20}" y="200" font-family="&apos;Segoe UI&apos;,system-ui,sans-serif"
+          font-size="12" fill="#8b949e">{cur_dates}</text>
+    <text x="{PAD + 20}" y="222" font-family="&apos;Segoe UI&apos;,system-ui,sans-serif"
+          font-size="11" fill="#484f58">🏆 Longest: {s["streak"]["longest"]} days</text>
+    <text x="{PAD + 20}" y="238" font-family="&apos;Segoe UI&apos;,system-ui,sans-serif"
+          font-size="11" fill="#484f58">{lng_dates}</text>
   </g>
 
   <!-- Separator line -->
-  <line x1="{PAD}" y1="235" x2="{W - PAD}" y2="235" stroke="#21262d" stroke-width="1"/>
+  <line x1="{PAD}" y1="260" x2="{W - PAD}" y2="260" stroke="#21262d" stroke-width="1"/>
 
   <!-- Language bar title -->
-  <text x="{PAD}" y="258" font-family="&apos;Segoe UI&apos;,system-ui,sans-serif"
-        font-size="12" font-weight="600" fill="#e6edf3">📝 Top Languages</text>
+  <text x="{PAD}" y="280" font-family="&apos;Segoe UI&apos;,system-ui,sans-serif"
+        font-size="13" font-weight="600" fill="#e6edf3">📝 Top Programming Languages</text>
   
   <!-- Language bar -->
-  <rect x="{PAD}" y="268" width="{W - PAD * 2}" height="12" rx="6" fill="#161b22" stroke="#21262d" stroke-width="1"/>
+  <rect x="{PAD}" y="288" width="{W - PAD * 2}" height="14" rx="7" fill="#161b22" stroke="#21262d" stroke-width="1"/>
   {lb}
   
   <!-- Legend - separated rows -->
@@ -335,11 +337,11 @@ def build_svg(stats):
   </g>
 
   <!-- Separator line -->
-  <line x1="{PAD}" y1="330" x2="{W - PAD}" y2="330" stroke="#21262d" stroke-width="1"/>
+  <line x1="{PAD}" y1="375" x2="{W - PAD}" y2="375" stroke="#21262d" stroke-width="1"/>
 
   <!-- Contribution grid title -->
-  <text x="{PAD}" y="360" font-family="&apos;Segoe UI&apos;,system-ui,sans-serif"
-        font-size="12" font-weight="600" fill="#e6edf3">📈 Contributions (Last 26 Weeks)</text>
+  <text x="{PAD}" y="395" font-family="&apos;Segoe UI&apos;,system-ui,sans-serif"
+        font-size="13" font-weight="600" fill="#e6edf3">📈 Contribution Activity (Last 26 Weeks)</text>
   
   <!-- Contribution grid -->
   {grid_block}
@@ -348,8 +350,8 @@ def build_svg(stats):
   <text x="{PAD}" y="{grid_y + 50}"
         font-family="&apos;Segoe UI&apos;,system-ui,sans-serif"
         font-size="9" fill="#8b949e">Less</text>
-  {''.join(f'<rect x="{PAD + 35 + i*12}" y="{grid_y + 40}" width="8" height="8" rx="2" fill="{levels[i]}"/>' for i in range(5))}
-  <text x="{PAD + 100}" y="{grid_y + 50}"
+  {''.join(f'<rect x="{PAD + 40 + i*12}" y="{grid_y + 40}" width="8" height="8" rx="2" fill="{levels[i]}"/>' for i in range(5))}
+  <text x="{PAD + 110}" y="{grid_y + 50}"
         font-family="&apos;Segoe UI&apos;,system-ui,sans-serif"
         font-size="9" fill="#8b949e">More</text>
 </svg>"""
