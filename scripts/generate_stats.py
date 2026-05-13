@@ -176,7 +176,7 @@ def lang_bar_svg(langs, x, y, w, h=10):
 
 def build_svg(stats):
     s = stats
-    W, H = 600, 520
+    W, H = 600, 650
     PAD = 25
 
     # contribution grid (mini) — last 26 weeks × 7 days
@@ -184,7 +184,7 @@ def build_svg(stats):
     cell = 8
     gap  = 2
     grid_x = PAD
-    grid_y = 390
+    grid_y = 415
     levels = ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353"]
 
     grid_svg = []
@@ -347,11 +347,11 @@ def build_svg(stats):
   {grid_block}
 
   <!-- Grid legend -->
-  <text x="{PAD}" y="{grid_y + 50}"
+  <text x="{PAD}" y="{grid_y + 65}"
         font-family="&apos;Segoe UI&apos;,system-ui,sans-serif"
         font-size="9" fill="#8b949e">Less</text>
-  {''.join(f'<rect x="{PAD + 40 + i*12}" y="{grid_y + 40}" width="8" height="8" rx="2" fill="{levels[i]}"/>' for i in range(5))}
-  <text x="{PAD + 110}" y="{grid_y + 50}"
+  {''.join(f'<rect x="{PAD + 40 + i*12}" y="{grid_y + 55}" width="8" height="8" rx="2" fill="{levels[i]}"/>' for i in range(5))}
+  <text x="{PAD + 110}" y="{grid_y + 65}"
         font-family="&apos;Segoe UI&apos;,system-ui,sans-serif"
         font-size="9" fill="#8b949e">More</text>
 </svg>"""
