@@ -49,31 +49,20 @@ vedant = {
 
 ---
 
-## 📊 GitHub Analytics
+## 📊 GitHub Stats
 
-<div align="center">
-
-<a href="https://github.com/VedantJadhav701">
-  <img height="180em" src="https://github-readme-stats-sigma-five.vercel.app/api?username=VedantJadhav701&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&include_all_commits=true&rank_icon=github" />
-</a>
-<a href="https://github.com/VedantJadhav701">
-  <img height="180em" src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=VedantJadhav701&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" />
-</a>
-
-</div>
+<!-- These badges auto-update daily via GitHub Actions from stats.json -->
+![Stars](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2FVedantJadhav701%2FVedantJadhav701%2Fmain%2Fstats.json&query=%24.total_stars&label=Total%20Stars&color=0F6E56&style=for-the-badge&logo=github)
+![Commits](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2FVedantJadhav701%2FVedantJadhav701%2Fmain%2Fstats.json&query=%24.total_commits&label=Commits&color=185FA5&style=for-the-badge&logo=git)
+![Contributions](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2FVedantJadhav701%2FVedantJadhav701%2Fmain%2Fstats.json&query=%24.total_contributions&label=Contributions&color=1D9E75&style=for-the-badge)
+![Current Streak](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2FVedantJadhav701%2FVedantJadhav701%2Fmain%2Fstats.json&query=%24.streak.current&label=%F0%9F%94%A5%20Current%20Streak&suffix=%20days&color=E24B4A&style=for-the-badge)
+![Longest Streak](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2FVedantJadhav701%2FVedantJadhav701%2Fmain%2Fstats.json&query=%24.streak.longest&label=%F0%9F%8F%86%20Longest%20Streak&suffix=%20days&color=854F0B&style=for-the-badge)
 
 <div align="center">
 
 [![GitHub Streak](https://streak-stats.demolab.com/?user=VedantJadhav701&theme=tokyonight&hide_border=true&date_format=j%20M%5B%20Y%5D)](https://git.io/streak-stats)
 
 </div>
-
-<div align="center">
-
-[![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=VedantJadhav701&theme=tokyo-night&hide_border=true&area=true)](https://github.com/VedantJadhav701)
-
-</div>
-
 ---
 
 ## 📚 Research & Publications
