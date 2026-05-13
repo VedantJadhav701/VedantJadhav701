@@ -176,7 +176,7 @@ def lang_bar_svg(langs, x, y, w, h=10):
 
 def build_svg(stats):
     s = stats
-    W, H = 500, 420
+    W, H = 520, 450
     PAD = 20
 
     # contribution grid (mini) — last 26 weeks × 7 days
@@ -184,7 +184,7 @@ def build_svg(stats):
     cell = 7
     gap  = 2
     grid_x = PAD
-    grid_y = 310
+    grid_y = 340
     levels = ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353"]
 
     grid_svg = []
@@ -204,30 +204,32 @@ def build_svg(stats):
 
     # language bar
     langs = s["languages"]
-    lb = lang_bar_svg(langs, PAD, 250, W - PAD * 2, 12)
+    lb = lang_bar_svg(langs, PAD, 268, W - PAD * 2, 12)
 
     # legend dots - fixed positioning to avoid overlap
     legend_parts = []
-    legend_y = 270
+    
+    # First row - 3 languages
+    legend_y = 265
     for i, l in enumerate(langs[:3]):
-        lx = PAD + (i * 150)
+        lx = PAD + (i * 155)
         legend_parts.append(
-            f'<circle cx="{lx}" cy="{legend_y}" r="4" fill="{l["color"]}"/>'
-            f'<text x="{lx + 10}" y="{legend_y + 4}" font-size="11" font-weight="600" fill="#e6edf3">'
+            f'<circle cx="{lx}" cy="{legend_y}" r="5" fill="{l["color"]}"/>'
+            f'<text x="{lx + 12}" y="{legend_y - 2}" font-size="11" font-weight="600" fill="#e6edf3">'
             f'{l["name"]}</text>'
-            f'<text x="{lx + 10}" y="{legend_y + 18}" font-size="9" fill="#8b949e">'
+            f'<text x="{lx + 12}" y="{legend_y + 14}" font-size="10" fill="#58a6ff" font-weight="600">'
             f'{l["pct"]}%</text>'
         )
     
-    # second row for remaining languages
+    # Second row - remaining 3 languages
     legend_y_2 = 295
     for i, l in enumerate(langs[3:6]):
-        lx = PAD + (i * 150)
+        lx = PAD + (i * 155)
         legend_parts.append(
-            f'<circle cx="{lx}" cy="{legend_y_2}" r="4" fill="{l["color"]}"/>'
-            f'<text x="{lx + 10}" y="{legend_y_2 + 4}" font-size="11" font-weight="600" fill="#e6edf3">'
+            f'<circle cx="{lx}" cy="{legend_y_2}" r="5" fill="{l["color"]}"/>'
+            f'<text x="{lx + 12}" y="{legend_y_2 - 2}" font-size="11" font-weight="600" fill="#e6edf3">'
             f'{l["name"]}</text>'
-            f'<text x="{lx + 10}" y="{legend_y_2 + 18}" font-size="9" fill="#8b949e">'
+            f'<text x="{lx + 12}" y="{legend_y_2 + 14}" font-size="10" fill="#58a6ff" font-weight="600">'
             f'{l["pct"]}%</text>'
         )
 
@@ -303,7 +305,7 @@ def build_svg(stats):
 
   <!-- Current Streak (Full Width) -->
   <g>
-    <rect x="{PAD}" y="140" width="465" height="80" rx="10" fill="#1c2128" stroke="#f85149" stroke-width="2"/>
+    <rect x="{PAD}" y="140" width="{W - PAD * 2}" height="80" rx="10" fill="#1c2128" stroke="#f85149" stroke-width="2"/>
     <text x="{PAD + 15}" y="163" font-family="&apos;Segoe UI&apos;,system-ui,sans-serif"
           font-size="12" font-weight="600" fill="#f85149">🔥 CURRENT STREAK</text>
     <text x="{W - PAD - 15}" y="167" font-family="&apos;Segoe UI&apos;,system-ui,sans-serif"
@@ -316,29 +318,38 @@ def build_svg(stats):
           font-size="10" fill="#484f58">🏆 Longest: {s["streak"]["longest"]} days ({lng_dates})</text>
   </g>
 
+  <!-- Separator line -->
+  <line x1="{PAD}" y1="235" x2="{W - PAD}" y2="235" stroke="#21262d" stroke-width="1"/>
+
   <!-- Language bar title -->
-  <text x="{PAD}" y="242" font-family="&apos;Segoe UI&apos;,system-ui,sans-serif"
+  <text x="{PAD}" y="258" font-family="&apos;Segoe UI&apos;,system-ui,sans-serif"
         font-size="12" font-weight="600" fill="#e6edf3">📝 Top Languages</text>
   
   <!-- Language bar -->
+  <rect x="{PAD}" y="268" width="{W - PAD * 2}" height="12" rx="6" fill="#161b22" stroke="#21262d" stroke-width="1"/>
   {lb}
   
-  <!-- Legend -->
-  {legend}
+  <!-- Legend - separated rows -->
+  <g id="legend-row-1">
+    {legend}
+  </g>
+
+  <!-- Separator line -->
+  <line x1="{PAD}" y1="330" x2="{W - PAD}" y2="330" stroke="#21262d" stroke-width="1"/>
 
   <!-- Contribution grid title -->
-  <text x="{PAD}" y="330" font-family="&apos;Segoe UI&apos;,system-ui,sans-serif"
+  <text x="{PAD}" y="360" font-family="&apos;Segoe UI&apos;,system-ui,sans-serif"
         font-size="12" font-weight="600" fill="#e6edf3">📈 Contributions (Last 26 Weeks)</text>
   
   <!-- Contribution grid -->
   {grid_block}
 
   <!-- Grid legend -->
-  <text x="{PAD}" y="{grid_y + 60}"
+  <text x="{PAD}" y="{grid_y + 50}"
         font-family="&apos;Segoe UI&apos;,system-ui,sans-serif"
         font-size="9" fill="#8b949e">Less</text>
-  {''.join(f'<rect x="{PAD + 35 + i*12}" y="{grid_y + 50}" width="8" height="8" rx="2" fill="{levels[i]}"/>' for i in range(5))}
-  <text x="{PAD + 100}" y="{grid_y + 60}"
+  {''.join(f'<rect x="{PAD + 35 + i*12}" y="{grid_y + 40}" width="8" height="8" rx="2" fill="{levels[i]}"/>' for i in range(5))}
+  <text x="{PAD + 100}" y="{grid_y + 50}"
         font-family="&apos;Segoe UI&apos;,system-ui,sans-serif"
         font-size="9" fill="#8b949e">More</text>
 </svg>"""
