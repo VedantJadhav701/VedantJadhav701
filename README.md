@@ -1,332 +1,272 @@
-<div align="center">
-  
-  # 👋 Hi, I'm Vedant Sanjay Jadhav
-  
-  ### AI/ML Research Engineer | Physical Intelligence & Scientific ML | Production ML Systems
-  
-  <a href="https://linkedin.com/in/vedantjadhav-ai"><img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
-  <a href="https://github.com/VedantJadhav701"><img src="https://img.shields.io/badge/GitHub-%23181717.svg?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"></a>
-  <a href="mailto:vedantjadhav1414@gmail.com"><img src="https://img.shields.io/badge/Email-%23EA4335.svg?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"></a>
-  
-  ---
-  
-</div>
-
-## 🎯 About Me
-
-I'm a final-year B.Tech. student in Computer Science (AI & ML) at Pimpri Chinchwad University, Pune, with a strong passion for applying machine learning to physical, medical, and industrial systems. My work bridges cutting-edge AI research with production-grade systems.
-
-```python
-class VedantJadhav:
-    def __init__(self):
-        self.education = "B.Tech. Computer Science (AI & ML)"
-        self.university = "Pimpri Chinchwad University, Pune"
-        self.location = "Pune, Maharashtra, India"
-        
-    def expertise(self):
-        return {
-            "research": ["LLMs", "Scientific ML", "Physical Intelligence"],
-            "production": ["MLOps", "RAG Systems", "Edge Inference"],
-            "domains": ["Materials Science", "Medical AI", "Renewable Energy", "Robotics"]
-        }
-    
-    def current_focus(self):
-        return [
-            "Physics-Informed ML & Embodied AI",
-            "Production ML Systems & Infrastructure",
-            "Clinical Reasoning & Medical AI Alignment",
-            "Recursive Language Models for Long-Context Reasoning"
-        ]
-```
-
----
-
-## 🏆 Achievements & Recognition
-
-<table align="center">
-<tr>
-<td width="50%">
-
-### 🥇 Major Awards
-
-⭐ **Best Research Paper Award** – ICCTVB-25 (Scopus Indexed)  
-🏅 **1st Place** – Code4Society Hackathon 2026  
-🏅 **1st Place** – CodeApex 24-hour Hackathon, VIT  
-🥉 **3rd Place** – National DevCraft Hackathon, IIT Indore  
-🥉 **3rd Place** – National AI Hackathon, IIT Indore  
-🎾 **National Finalist** – Table Tennis, IIM Indore
-
-</td>
-<td width="50%">
-
-### 📚 Publications
-
-📰 **AIP Publishing** – Renewable Energy Forecasting  
-📖 **Under Review** – Clinical Reasoning & SLMs  
-📝 **Working Paper** – Physics-Informed ML for Metallurgy  
-🔬 **Applied Research** – Magnesium Extraction & Biomass  
-💡 **Focus Areas** – Medical AI, Materials Science
-
-</td>
-</tr>
-</table>
-
----
-
-## 📚 Research & Publications
-
-### 🔬 Published Work
-
-**"Ensemble and Hybrid ML Approaches for Renewable Energy Forecasting"**
-- 📰 Venue: AIP Publishing (2025)
-- 🏆 Best Research Paper Award at ICCTVB-25
-- 📊 Results: 30% error reduction (synthetic), 15% (real-world)
-- 🔗 Indexed: Scopus
-
----
-
-### 📖 Working Papers
-
-**"Physics-Informed Gaussian Process Modeling for Carnallite Electrolysis Optimization"**
-- 🔬 Derived Eutectic Lower Bound Theorem (423°C absolute minimum)
-- 📈 Performance: R² = 0.9996 (synthetic), R² = 0.880 (cross-source)
-- 🎯 Two optimal pathways identified (KCl-MgCl₂, MgCl₂-NaCl)
-
-**"Small Language Models for Clinical Reasoning and Medical Decision Alignment"** (Under Review)
-- 🆕 Metrics: Semantic Drift Score (SDS), Structural Alignment Index (SAI)
-- 💡 Key Finding: Accuracy ≠ Deployment Readiness
-
----
-
-### 🧪 Applied Research
-
-- **Magnesium Extraction** via Physics-Informed ML (R² = 0.987, 250°C reduction)
-- **Levulinic Acid Yield Prediction** using GPR (R² = 0.966, 10-model benchmark)
-
----
-
-## 💼 Professional Experience
-
-### 🚀 DPulseAI Pvt. Ltd. | AI Developer Intern
-**October 2025 - April 2026 | Pune, Maharashtra**
-
-✅ Engineered production LLM and RAG systems achieving **35% retrieval accuracy improvement** and **45% latency reduction**
-
-✅ Architected Dockerized inference pipelines with CI/CD and canary deployments, reducing deployment time to **under 10 minutes**
-
-✅ Designed scalable inference services with cost optimization through quantization and post-deployment monitoring
-
-### 🎨 Tamizhan Skills | AI & ML Intern
-**April 2025 - May 2025 | Pune, Maharashtra**
-
-✅ Delivered 5+ NLP applications using AWS Lambda and Streamlit, reducing manual processing time by **30%**
-
-✅ Automated text summarization and classification workflows, increasing operational throughput by **25%**
-
----
-
-## 🚀 Flagship Projects
-
-### 🌍 EcoGuard – AI Carbon Intelligence Platform
-**Code4Society Hackathon 2026 - Winner**
-
-| Aspect | Details |
-|--------|---------|
-| 🎯 Objective | Multimodal AI system for carbon footprint intelligence |
-| 🔧 Tech Stack | React, FastAPI, Edge ML, IoT Sensors, Computer Vision |
-| 🎁 Deliverables | Carbon score breakdown, real-time tracking, what-if simulation |
-| 🏆 Recognition | Hackathon Winner (1st Place) |
-
----
-
-### 🤖 Vision System – Autonomous Cleaning Robot
-**Physical AI & Edge Inference (2025)**
-
-| Metric | Value |
-|--------|-------|
-| 🎯 Model | YOLOv8 Nano (Custom Dataset) |
-| 📊 Precision | 0.782 |
-| 🎯 Recall | 0.795 |
-| 🎪 mAP@50 | 0.823 |
-| ⚡ Latency | ~6 ms/image (~166 FPS on GPU) |
-| 🎓 Application | Real-world robotics debris detection |
-
----
-
-### 🏥 ILM – Institutional Language Model
-**Healthcare SLM + RAG Platform (2025)**
-
-| Component | Achievement |
-|-----------|-------------|
-| 🏗️ Architecture | On-premise hospital intelligence engine |
-| 🔍 Retrieval | Vector-search with RAG integration |
-| 📈 Accuracy Gain | 32% improvement across departments |
-| 🔐 Security | Role-based access control |
-| 📊 Monitoring | Drift detection & post-deployment tracking |
-
----
-
-### 🦾 Robotics Action Prediction System
-**Production ML + MLOps (2025)**
-
-✨ Built LSTM-based sequence model to predict robotic actions from state-action trajectories with robust preprocessing and validation
-
-✨ Deployed production-grade inference system using FastAPI and Docker with feature masking, normalization, and stability safeguards
-
----
-
-### 🧠 LLM Reasoning Evaluation Pipeline
-**NVIDIA Nemotron (2025)**
-
-✨ Developed scalable evaluation pipeline for reasoning-focused LLMs using multi-hop benchmarks and advanced prompting techniques
-
-✨ Deployed FastAPI-based inference with MLflow tracking for accuracy, latency, and automated CI/CD benchmarking
-
----
-
-## 🛠️ Technical Arsenal
-
-### 💻 Programming Languages
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
-![C++](https://img.shields.io/badge/C++-00599C?style=flat&logo=cplusplus&logoColor=white)
-![SQL](https://img.shields.io/badge/SQL-CC2927?style=flat&logo=mysql&logoColor=white)
-
-### 🤖 AI & Machine Learning
-![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat&logo=pytorch&logoColor=white)
-![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=flat&logo=tensorflow&logoColor=white)
-![HuggingFace](https://img.shields.io/badge/HuggingFace-FFD21E?style=flat&logo=huggingface&logoColor=black)
-![Scikit-learn](https://img.shields.io/badge/Scikit--learn-F7931E?style=flat&logo=scikit-learn&logoColor=white)
-
-### 🚀 ML Frameworks & Tools
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat&logo=fastapi&logoColor=white)
-![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat&logo=streamlit&logoColor=white)
-![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=flat&logo=langchain&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white)
-
-### ☁️ Cloud & Infrastructure
-![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat&logo=amazon-aws&logoColor=FF9900)
-![Google Cloud](https://img.shields.io/badge/Google%20Cloud-4285F4?style=flat&logo=google-cloud&logoColor=white)
-![Azure](https://img.shields.io/badge/Azure-0078D4?style=flat&logo=microsoft-azure&logoColor=white)
-![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat&logo=kubernetes&logoColor=white)
-
-### 💾 Databases & Vector Stores
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=flat&logo=postgresql&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat&logo=mongodb&logoColor=white)
-![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat&logo=redis&logoColor=white)
-![Pinecone](https://img.shields.io/badge/Pinecone-000000?style=flat&logo=pinecone&logoColor=white)
-
-### 🔬 Specialized Skills
-- Computer Vision & YOLOv8
-- NLP & LLM Fine-tuning
-- Physics-Informed ML
-- MLOps & Model Monitoring
-- RAG Systems & Vector DBs
-- Edge Inference & Optimization
-
----
-
-## 📊 GitHub Analytics
+# <div align="center">Vedant Sanjay Jadhav</div>
 
 <div align="center">
 
-[![GitHub Stats](https://github-readme-stats.vercel.app/api?username=VedantJadhav701&show_icons=true&theme=dark&hide_border=true&count_private=true)](https://github.com/VedantJadhav701)
+### AI/ML Research Engineer • Scientific Machine Learning • Physical Intelligence • Production AI Systems
 
-[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=VedantJadhav701&theme=dark&hide_border=true)](https://github.com/VedantJadhav701)
+<br>
 
-[![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=VedantJadhav701&theme=dark&layout=compact&hide_border=true)](https://github.com/VedantJadhav701)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Vedant%20Jadhav-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/vedantjadhav-ai)
+[![GitHub](https://img.shields.io/badge/GitHub-VedantJadhav701-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/VedantJadhav701)
+[![Email](https://img.shields.io/badge/Email-Contact-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:vedantjadhav1414@gmail.com)
 
 </div>
 
 ---
 
-## 🎓 Education & Certifications
+# About
 
-| Degree | Institute | Year |
-|--------|-----------|-------|
-| **B.Tech. (AI & ML)** | Pimpri Chinchwad University, Pune | 2023-27 |
+Final-year B.Tech. student in Computer Science (Artificial Intelligence & Machine Learning) at Pimpri Chinchwad University, Pune.
 
-### 🏅 Professional Certifications
-- Deep Learning Specialization – DeepLearning.AI
-- TensorFlow for AI/ML – DeepLearning.AI
-- Supervised ML Specialization – Stanford University
-- Mathematics for ML & Data Science – DeepLearning.AI (Linear Algebra, Calculus, Probability & Statistics)
+Focused on building production-grade AI systems and applying machine learning to scientific, industrial, medical, and embodied environments.
 
----
+### Areas of Interest
 
-## 🎯 Leadership & Community Impact
-
-### 🏢 Organizational Roles
-- **Core Coordinator** – PCU Sports Club (2023-27)
-- **Placement Coordinator** – Career Dev Cell (2024-27)
-- **Core Team Member** – R&D Club (2023-27)
-- **Team Leader** – Smart India Hackathon 2025
-
-### 🎤 Additional Contributions
-- **Technical Speaker** – 3+ talks on AI deployment & production ML
-- **Hackathon Mentor** – Multiple hackathon events
-- **Research Collaborator** – Multiple ML & materials science projects
+- Scientific Machine Learning
+- Physical Intelligence & Robotics
+- Large Language Models & RAG Systems
+- Medical AI & Clinical Reasoning
+- Production ML Infrastructure
+- Edge AI & Real-Time Inference
 
 ---
 
-## 💡 Current Focus
+# Professional Experience
 
-### 🧠 Physical Intelligence & Embodied AI
-Exploring interaction-driven learning and embodied constraints in AI systems
+## AI Developer Intern — DPulseAI Pvt. Ltd.
+**Oct 2025 – Apr 2026 | Pune, India**
 
-### 📈 Production ML Systems
-MLOps best practices, inference optimization, and model monitoring
+- Engineered production LLM and RAG systems for enterprise workflows
+- Built scalable FastAPI inference services and Dockerized deployment pipelines
+- Implemented CI/CD automation, monitoring, and optimization workflows
+- Improved retrieval quality and reduced inference latency for production systems
 
-### 🏥 Medical AI Alignment
-Building clinical decision support systems and reasoning evaluation frameworks
-
-### 🔄 Recursive Language Models
-Long-context inference-time scaling and reasoning performance optimization
+### Key Outcomes
+- 35% improvement in retrieval accuracy
+- 45% reduction in inference latency
+- Deployment cycles reduced to under 10 minutes
 
 ---
 
-## 📬 Get In Touch
+## AI & ML Intern — Tamizhan Skills
+**Apr 2025 – May 2025 | Pune, India**
+
+- Developed NLP automation systems using AWS Lambda and Streamlit
+- Built text summarization and classification workflows
+- Improved operational throughput through automation pipelines
+
+---
+
+# Research & Publications
+
+## Published Research
+
+### Ensemble and Hybrid ML Approaches for Renewable Energy Forecasting
+**AIP Publishing | 2025**
+
+- Best Research Paper Award — ICCTVB-25
+- Scopus Indexed Publication
+- Focused on ensemble learning methods for renewable energy forecasting
+
+---
+
+## Ongoing Research
+
+### Physics-Informed Gaussian Process Modeling for Carnallite Electrolysis Optimization
+
+Research involving:
+- Physics-informed machine learning
+- Thermodynamic optimization
+- Industrial process intelligence
+- Electrochemical system modeling
+
+---
+
+### Small Language Models for Clinical Reasoning & Medical Decision Alignment
+
+Research focused on:
+- Clinical reasoning reliability
+- Semantic consistency evaluation
+- Medical deployment readiness
+- Long-context reasoning systems
+
+---
+
+# Featured Projects
+
+## ILM — Institutional Language Model
+### Healthcare AI Infrastructure Platform
+
+Enterprise-grade healthcare intelligence platform designed for hospital environments.
+
+### Core Features
+- Retrieval-Augmented Generation (RAG)
+- Hospital document intelligence
+- Role-based access control
+- Clinical reasoning workflows
+- Monitoring and drift detection
+
+### Stack
+`FastAPI` `Transformers` `Docker` `Vector Databases`
+
+---
+
+## EcoGuard — AI Carbon Intelligence Platform
+### Winner — Code4Society Hackathon 2026
+
+Multimodal AI platform for carbon footprint analysis and sustainability intelligence.
+
+### Capabilities
+- Real-time carbon tracking
+- Environmental analytics
+- IoT-integrated intelligence
+- Computer vision-based monitoring
+- Sustainability simulation systems
+
+---
+
+## Autonomous Cleaning Robot Vision System
+### Physical AI & Edge Inference
+
+Real-time robotics perception system built using lightweight computer vision architectures.
+
+### Highlights
+- YOLOv8 Nano deployment
+- Real-time debris detection
+- Edge inference optimization
+- Low-latency GPU inference
+- Robotics perception integration
+
+---
+
+## Robotics Action Prediction System
+
+Sequence modeling framework for robotic action prediction.
+
+### Components
+- LSTM-based temporal prediction
+- FastAPI inference services
+- Dockerized deployment
+- Monitoring infrastructure
+- Stability-aware preprocessing pipeline
+
+---
+
+## LLM Reasoning Evaluation Pipeline
+### NVIDIA Nemotron Evaluation Framework
+
+Benchmarking infrastructure for reasoning-focused language models.
+
+### Features
+- Multi-hop reasoning evaluation
+- Automated benchmarking workflows
+- MLflow experiment tracking
+- CI/CD-integrated testing
+- Latency and reasoning analysis
+
+---
+
+# Technical Skills
+
+## Languages
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![C++](https://img.shields.io/badge/C++-00599C?style=flat-square&logo=cplusplus&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+![SQL](https://img.shields.io/badge/SQL-CC2927?style=flat-square&logo=mysql&logoColor=white)
+
+## AI & Machine Learning
+
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white)
+![HuggingFace](https://img.shields.io/badge/HuggingFace-FFD21E?style=flat-square&logo=huggingface&logoColor=black)
+![Scikit-learn](https://img.shields.io/badge/Scikit--learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white)
+![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square&logoColor=white)
+
+## Infrastructure & Deployment
+
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
+![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazon-aws&logoColor=FF9900)
+![Google Cloud](https://img.shields.io/badge/Google_Cloud-4285F4?style=flat-square&logo=google-cloud&logoColor=white)
+
+---
+
+# Achievements
+
+- Best Research Paper Award — ICCTVB-25
+- 1st Place — Code4Society Hackathon 2026
+- 1st Place — CodeApex 24-Hour Hackathon
+- 3rd Place — National DevCraft Hackathon, IIT Indore
+- 3rd Place — National AI Hackathon, IIT Indore
+- National Finalist — Table Tennis, IIM Indore
+
+---
+
+# Leadership & Community
+
+- Core Coordinator — PCU Sports Club
+- Placement Coordinator — Career Development Cell
+- Core Team Member — R&D Club
+- Team Leader — Smart India Hackathon 2025
+- AI/ML Technical Speaker
+- Hackathon Mentor
+
+---
+
+# Education
+
+## Pimpri Chinchwad University
+### B.Tech. — Computer Science (Artificial Intelligence & Machine Learning)
+**2023 – 2027**
+
+---
+
+# Certifications
+
+- Deep Learning Specialization — DeepLearning.AI
+- TensorFlow for AI/ML — DeepLearning.AI
+- Supervised Machine Learning — Stanford University
+- Mathematics for Machine Learning & Data Science — DeepLearning.AI
+
+---
+
+# Current Focus
+
+- Physical Intelligence & Embodied AI
+- Scientific Machine Learning
+- Medical AI Alignment
+- Long-Context Reasoning Systems
+- Production AI Infrastructure
+
+---
+
+# GitHub Analytics
 
 <div align="center">
 
-### Let's Connect!
+<img height="180em" src="https://github-readme-stats.vercel.app/api?username=VedantJadhav701&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" />
 
-**📧 Email:** [vedantjadhav1414@gmail.com](mailto:vedantjadhav1414@gmail.com)
+<img height="180em" src="https://github-readme-streak-stats.herokuapp.com/?user=VedantJadhav701&theme=tokyonight&hide_border=true" />
 
-**💼 LinkedIn:** [linkedin.com/in/vedantjadhav-ai](https://linkedin.com/in/vedantjadhav-ai)
-
-**📱 Phone:** +91-7410036328
-
-**💻 GitHub:** [github.com/VedantJadhav701](https://github.com/VedantJadhav701)
-
----
-
-### I'm always open to:
-- 🤝 Research collaborations
-- 💬 Discussing AI/ML systems
-- 🚀 Building production ML pipelines
-- 📚 Knowledge sharing and mentoring
+<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=VedantJadhav701&layout=compact&theme=tokyonight&hide_border=true" />
 
 </div>
 
 ---
 
-## ⚡ Fun Fact
+# Connect
 
-When I'm not building AI systems, you'll find me on the **table tennis court**! 🏓
-
-National Finalist at Atharv Ranbhoomi 2024, IIM Indore
+- Email: **vedantjadhav1414@gmail.com**
+- LinkedIn: **linkedin.com/in/vedantjadhav-ai**
+- GitHub: **github.com/VedantJadhav701**
+- Location: **Pune, Maharashtra, India**
 
 ---
 
 <div align="center">
 
-![Profile Views](https://komarev.com/ghpvc/?username=VedantJadhav701&label=Profile%20Views&color=blue&style=flat-square)
-
-**Built with ❤️ | Last Updated: April 2026**
-
----
-
-*Thank you for visiting! 🚀 Happy coding & researching!*
+### Research • Engineering • Production AI Systems
 
 </div>
