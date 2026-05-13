@@ -1,0 +1,362 @@
+"""
+generate_stats.py
+Fetches real GitHub data via GraphQL API and produces:
+  - assets/github-stats.svg   (embed in README as an image)
+  - assets/stats.json         (raw data for shields.io dynamic badges)
+
+Run locally:  GH_TOKEN=<your_pat> GH_USER=VedantJadhav701 python scripts/generate_stats.py
+"""
+
+import os
+import json
+import math
+import requests
+from datetime import datetime, timedelta, timezone
+from pathlib import Path
+
+# ── Config ──────────────────────────────────────────────────────────────────
+TOKEN    = os.environ["GH_TOKEN"]
+USERNAME = os.environ.get("GH_USER", "VedantJadhav701")
+OUT_DIR  = Path("assets")
+OUT_DIR.mkdir(exist_ok=True)
+
+HEADERS = {
+    "Authorization": f"bearer {TOKEN}",
+    "Content-Type":  "application/json",
+}
+
+# ── GraphQL query ────────────────────────────────────────────────────────────
+QUERY = """
+query($login: String!) {
+  user(login: $login) {
+    name
+    followers      { totalCount }
+    following      { totalCount }
+    repositories(ownerAffiliations: OWNER, isFork: false, first: 100) {
+      totalCount
+      nodes {
+        stargazerCount
+        languages(first: 10, orderBy: {field: SIZE, direction: DESC}) {
+          edges { size node { name color } }
+        }
+      }
+    }
+    contributionsCollection {
+      totalCommitContributions
+      totalPullRequestContributions
+      totalIssueContributions
+      contributionCalendar {
+        totalContributions
+        weeks {
+          contributionDays { contributionCount date }
+        }
+      }
+    }
+  }
+}
+"""
+
+# ── Helpers ──────────────────────────────────────────────────────────────────
+def gql(query, variables):
+    r = requests.post(
+        "https://api.github.com/graphql",
+        json={"query": query, "variables": variables},
+        headers=HEADERS,
+        timeout=30,
+    )
+    r.raise_for_status()
+    data = r.json()
+    if "errors" in data:
+        raise RuntimeError(data["errors"])
+    return data["data"]
+
+
+def calc_streaks(weeks):
+    """Return current streak and longest streak from contribution calendar."""
+    days = []
+    for week in weeks:
+        for d in week["contributionDays"]:
+            days.append((d["date"], d["contributionCount"]))
+    days.sort()
+
+    today = datetime.now(timezone.utc).date()
+
+    # ── current streak (count backwards from today) ──
+    current = 0
+    current_start = None
+    expected = today
+    for date_str, count in reversed(days):
+        d = datetime.strptime(date_str, "%Y-%m-%d").date()
+        if d > today:
+            continue
+        if d == expected or (d == expected - timedelta(1) and current == 0):
+            if count > 0:
+                current += 1
+                current_start = date_str
+                expected = d - timedelta(1)
+            elif current == 0:
+                expected = d - timedelta(1)
+            else:
+                break
+        elif d < expected:
+            break
+
+    # ── longest streak ──
+    longest = cur = 0
+    longest_start = longest_end = cur_start = None
+    for date_str, count in days:
+        if count > 0:
+            cur += 1
+            if cur_start is None:
+                cur_start = date_str
+            if cur > longest:
+                longest, longest_start, longest_end = cur, cur_start, date_str
+        else:
+            cur, cur_start = 0, None
+
+    return dict(
+        current=current,
+        current_start=current_start,
+        current_end=str(today),
+        longest=longest,
+        longest_start=longest_start,
+        longest_end=longest_end,
+    )
+
+
+def calc_languages(repos):
+    lang_bytes: dict = {}
+    for repo in repos:
+        for edge in repo["languages"]["edges"]:
+            n = edge["node"]["name"]
+            c = edge["node"]["color"] or "#8b949e"
+            lang_bytes.setdefault(n, {"bytes": 0, "color": c})
+            lang_bytes[n]["bytes"] += edge["size"]
+    total = sum(v["bytes"] for v in lang_bytes.values()) or 1
+    langs = [
+        {"name": k, "color": v["color"], "pct": round(v["bytes"] / total * 100, 2)}
+        for k, v in lang_bytes.items()
+    ]
+    langs.sort(key=lambda x: x["pct"], reverse=True)
+    return langs[:6]
+
+
+def fmt(n):
+    if n >= 1_000_000:
+        return f"{n/1_000_000:.1f}M"
+    if n >= 1_000:
+        return f"{n/1_000:.1f}k"
+    return str(n)
+
+
+def date_range(start, end):
+    if not start or not end:
+        return ""
+    s = datetime.strptime(start, "%Y-%m-%d")
+    e = datetime.strptime(end,   "%Y-%m-%d")
+    return f"{s.strftime('%d %b')} – {e.strftime('%d %b %Y')}"
+
+
+# ── SVG generation ────────────────────────────────────────────────────────────
+def lang_bar_svg(langs, x, y, w, h=10):
+    """Render a segmented language bar."""
+    parts = []
+    cx = x
+    for i, l in enumerate(langs):
+        seg_w = round(l["pct"] / 100 * w, 2)
+        rx_left  = h // 2 if i == 0 else 0
+        rx_right = h // 2 if i == len(langs) - 1 else 0
+        parts.append(
+            f'<rect x="{cx}" y="{y}" width="{seg_w}" height="{h}" '
+            f'rx="{max(rx_left, rx_right)}" fill="{l["color"]}"/>'
+        )
+        cx += seg_w
+    return "\n".join(parts)
+
+
+def build_svg(stats):
+    s = stats
+    W, H = 480, 310
+    PAD = 24
+
+    # contribution grid (mini) — last 26 weeks × 7 days
+    weeks_data = s["raw_weeks"][-26:]
+    cell = 8
+    gap  = 2
+    grid_x = PAD
+    grid_y = 228
+    levels = ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353"]
+
+    grid_svg = []
+    for wi, week in enumerate(weeks_data):
+        for di, day in enumerate(week["contributionDays"]):
+            c = day["contributionCount"]
+            lvl = 0 if c == 0 else 1 if c < 3 else 2 if c < 6 else 3 if c < 10 else 4
+            gx = grid_x + wi * (cell + gap)
+            gy = grid_y + di * (cell + gap)
+            grid_svg.append(
+                f'<rect x="{gx}" y="{gy}" width="{cell}" height="{cell}" '
+                f'rx="2" fill="{levels[lvl]}"/>'
+            )
+
+    grid_block = "\n    ".join(grid_svg)
+    grid_w = len(weeks_data) * (cell + gap) - gap
+
+    # language bar
+    langs = s["languages"]
+    lb = lang_bar_svg(langs, PAD, 194, W - PAD * 2, 10)
+
+    # legend dots
+    legend_parts = []
+    lx = PAD
+    for l in langs[:5]:
+        legend_parts.append(
+            f'<circle cx="{lx + 4}" cy="216" r="4" fill="{l["color"]}"/>'
+            f'<text x="{lx + 12}" y="220" font-size="10" fill="#8b949e">'
+            f'{l["name"]} {l["pct"]}%</text>'
+        )
+        lx += len(l["name"]) * 6 + 52
+
+    legend = "\n    ".join(legend_parts)
+
+    # streak dates
+    cur_dates = date_range(s["streak"]["current_start"], s["streak"]["current_end"])
+    lng_dates = date_range(s["streak"]["longest_start"], s["streak"]["longest_end"])
+
+    updated = datetime.now(timezone.utc).strftime("%-d %b %Y")
+
+    svg = f"""<svg width="{W}" height="{H}" viewBox="0 0 {W} {H}"
+     xmlns="http://www.w3.org/2000/svg"
+     role="img" aria-label="Vedant Jadhav GitHub stats card">
+  <title>VedantJadhav701 GitHub Stats</title>
+
+  <!-- Background -->
+  <rect width="{W}" height="{H}" rx="12" fill="#0d1117"/>
+  <rect width="{W}" height="{H}" rx="12" fill="none" stroke="#30363d" stroke-width="1"/>
+
+  <!-- Header -->
+  <text x="{PAD}" y="28" font-family="&apos;Segoe UI&apos;,system-ui,sans-serif"
+        font-size="13" font-weight="600" fill="#e6edf3">
+    ⚡ VedantJadhav701 — GitHub Stats
+  </text>
+  <text x="{W - PAD}" y="28" font-family="&apos;Segoe UI&apos;,system-ui,sans-serif"
+        font-size="10" fill="#484f58" text-anchor="end">
+    Updated {updated}
+  </text>
+
+  <line x1="{PAD}" y1="38" x2="{W - PAD}" y2="38" stroke="#21262d" stroke-width="1"/>
+
+  <!-- Stat boxes -->
+  <!-- Stars -->
+  <rect x="{PAD}" y="50" width="92" height="56" rx="8" fill="#161b22" stroke="#21262d" stroke-width="1"/>
+  <text x="{PAD + 46}" y="74" font-family="&apos;Segoe UI&apos;,system-ui,sans-serif"
+        font-size="18" font-weight="700" fill="#f0c040" text-anchor="middle">{fmt(s["total_stars"])}</text>
+  <text x="{PAD + 46}" y="96" font-family="&apos;Segoe UI&apos;,system-ui,sans-serif"
+        font-size="10" fill="#8b949e" text-anchor="middle">⭐ Stars</text>
+
+  <!-- Commits -->
+  <rect x="{PAD + 102}" y="50" width="92" height="56" rx="8" fill="#161b22" stroke="#21262d" stroke-width="1"/>
+  <text x="{PAD + 148}" y="74" font-family="&apos;Segoe UI&apos;,system-ui,sans-serif"
+        font-size="18" font-weight="700" fill="#58a6ff" text-anchor="middle">{fmt(s["total_commits"])}</text>
+  <text x="{PAD + 148}" y="96" font-family="&apos;Segoe UI&apos;,system-ui,sans-serif"
+        font-size="10" fill="#8b949e" text-anchor="middle">💻 Commits</text>
+
+  <!-- Contributions -->
+  <rect x="{PAD + 204}" y="50" width="92" height="56" rx="8" fill="#161b22" stroke="#21262d" stroke-width="1"/>
+  <text x="{PAD + 250}" y="74" font-family="&apos;Segoe UI&apos;,system-ui,sans-serif"
+        font-size="18" font-weight="700" fill="#3fb950" text-anchor="middle">{fmt(s["total_contributions"])}</text>
+  <text x="{PAD + 250}" y="96" font-family="&apos;Segoe UI&apos;,system-ui,sans-serif"
+        font-size="10" fill="#8b949e" text-anchor="middle">📊 Contributions</text>
+
+  <!-- Current streak -->
+  <rect x="{PAD + 306}" y="50" width="130" height="56" rx="8" fill="#161b22" stroke="#21262d" stroke-width="1"/>
+  <text x="{PAD + 371}" y="70" font-family="&apos;Segoe UI&apos;,system-ui,sans-serif"
+        font-size="22" font-weight="700" fill="#f85149" text-anchor="middle">🔥 {s["streak"]["current"]}</text>
+  <text x="{PAD + 371}" y="87" font-family="&apos;Segoe UI&apos;,system-ui,sans-serif"
+        font-size="10" fill="#8b949e" text-anchor="middle">Current Streak (days)</text>
+  <text x="{PAD + 371}" y="100" font-family="&apos;Segoe UI&apos;,system-ui,sans-serif"
+        font-size="9" fill="#484f58" text-anchor="middle">{cur_dates}</text>
+
+  <!-- Longest streak -->
+  <rect x="{PAD}" y="120" width="432" height="40" rx="8" fill="#161b22" stroke="#21262d" stroke-width="1"/>
+  <text x="{PAD + 12}" y="136" font-family="&apos;Segoe UI&apos;,system-ui,sans-serif"
+        font-size="11" fill="#8b949e">🏆 Longest Streak</text>
+  <text x="{PAD + 12}" y="152" font-family="&apos;Segoe UI&apos;,system-ui,sans-serif"
+        font-size="10" fill="#484f58">{lng_dates}</text>
+  <text x="{W - PAD - 12}" y="144" font-family="&apos;Segoe UI&apos;,system-ui,sans-serif"
+        font-size="22" font-weight="700" fill="#a371f7" text-anchor="end">{s["streak"]["longest"]} days</text>
+
+  <!-- Language bar -->
+  <text x="{PAD}" y="182" font-family="&apos;Segoe UI&apos;,system-ui,sans-serif"
+        font-size="11" fill="#8b949e">Most used languages</text>
+  {lb}
+  {legend}
+
+  <!-- Contribution grid -->
+  <text x="{PAD}" y="222" font-family="&apos;Segoe UI&apos;,system-ui,sans-serif"
+        font-size="11" fill="#8b949e">Contributions (last 26 weeks)</text>
+  {grid_block}
+
+  <!-- Grid legend -->
+  <text x="{PAD + grid_w - 60}" y="{grid_y + 80}"
+        font-family="&apos;Segoe UI&apos;,system-ui,sans-serif"
+        font-size="9" fill="#484f58">Less</text>
+  {''.join(f'<rect x="{PAD + grid_w - 42 + i*12}" y="{grid_y + 70}" width="8" height="8" rx="2" fill="{levels[i]}"/>' for i in range(5))}
+  <text x="{PAD + grid_w + 22}" y="{grid_y + 80}"
+        font-family="&apos;Segoe UI&apos;,system-ui,sans-serif"
+        font-size="9" fill="#484f58">More</text>
+</svg>"""
+
+    return svg
+
+
+# ── Main ─────────────────────────────────────────────────────────────────────
+def main():
+    print(f"Fetching stats for @{USERNAME} …")
+    data = gql(QUERY, {"login": USERNAME})
+    user = data["user"]
+
+    repos = user["repositories"]["nodes"]
+    total_stars = sum(r["stargazerCount"] for r in repos)
+    languages   = calc_languages(repos)
+
+    cc      = user["contributionsCollection"]
+    cal     = cc["contributionCalendar"]
+    streaks = calc_streaks(cal["weeks"])
+
+    stats = {
+        "updated_at":          datetime.now(timezone.utc).isoformat(),
+        "username":            USERNAME,
+        "public_repos":        user["repositories"]["totalCount"],
+        "followers":           user["followers"]["totalCount"],
+        "following":           user["following"]["totalCount"],
+        "total_stars":         total_stars,
+        "total_commits":       cc["totalCommitContributions"],
+        "total_prs":           cc["totalPullRequestContributions"],
+        "total_issues":        cc["totalIssueContributions"],
+        "total_contributions": cal["totalContributions"],
+        "streak":              streaks,
+        "languages":           languages,
+        "raw_weeks":           cal["weeks"],          # used for SVG grid
+    }
+
+    # write stats.json (without raw_weeks to keep it clean)
+    clean = {k: v for k, v in stats.items() if k != "raw_weeks"}
+    json_path = OUT_DIR / "stats.json"
+    json_path.write_text(json.dumps(clean, indent=2))
+    print(f"✅ Wrote {json_path}")
+
+    # write SVG
+    svg_path = OUT_DIR / "github-stats.svg"
+    svg_path.write_text(build_svg(stats))
+    print(f"✅ Wrote {svg_path}")
+
+    print("\nStats summary:")
+    print(f"  Stars:         {total_stars}")
+    print(f"  Commits:       {cc['totalCommitContributions']}")
+    print(f"  Contributions: {cal['totalContributions']}")
+    print(f"  Streak:        {streaks['current']} days (longest: {streaks['longest']})")
+
+
+if __name__ == "__main__":
+    main()
