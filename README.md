@@ -55,7 +55,6 @@ vedant = {
 
 [![GitHub Stats Card](./assets/github-stats.svg)](https://github.com/VedantJadhav701)
 
-[![GitHub Streak](https://streak-stats.demolab.com?user=VedantJadhav701)](https://git.io/streak-stats)
 
 </div>
 
