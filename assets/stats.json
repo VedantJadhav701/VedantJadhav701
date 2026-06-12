@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-06-11T06:46:10.672851+00:00",
+  "updated_at": "2026-06-12T06:38:38.541611+00:00",
   "username": "VedantJadhav701",
   "public_repos": 61,
-  "followers": 4,
+  "followers": 3,
   "following": 6,
   "total_stars": 114,
   "total_commits": 525,
@@ -12,7 +12,7 @@
   "streak": {
     "current": 1,
     "current_start": "2026-06-10",
-    "current_end": "2026-06-11",
+    "current_end": "2026-06-12",
     "longest": 19,
     "longest_start": "2026-04-27",
     "longest_end": "2026-05-15"
@@ -21,7 +21,7 @@
     {
       "name": "Python",
       "color": "#3572A5",
-      "pct": 89.28
+      "pct": 89.29
     },
     {
       "name": "C++",
