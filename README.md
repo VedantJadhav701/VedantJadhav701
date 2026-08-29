@@ -134,6 +134,22 @@ Additional work spans **LLM evaluation & reliability tooling**, **offline coding
 
 </td>
 </tr>
+<tr>
+<td width="50%" valign="top">
+
+### 📈 AI Demand Intelligence Platform
+**End-to-End Demand Forecasting & BI** · [GitHub](https://github.com/VedantJadhav701/ai-demand-intelligence-platform) · [Live Demo](https://demand-ai.vercel.app/)
+An end-to-end demand forecasting and business intelligence platform that turns historical sales data into forecasts, demand insights, and actionable business decisions.
+
+**Key capabilities:** automated demand analysis · time-series forecasting · trend & seasonality analysis · business-oriented demand intelligence · production-oriented ML pipeline · deployed web app
+
+`Pandas` `Scikit-learn` `FastAPI` `Streamlit` `MLOps`
+
+</td>
+<td width="50%" valign="top">
+
+</td>
+</tr>
 </table>
 
 ---
