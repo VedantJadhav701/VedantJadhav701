@@ -304,19 +304,19 @@ vedant = {
 <br/>
 
 ### 🏆 GitHub Trophies
-<img src="https://github-profile-trophy.vercel.app/?username=VedantJadhav701&theme=radical&no-frame=false&no-bg=true&margin-w=4" alt="GitHub Trophies" width="100%"/>
+<img src="https://github-profile-trophy-unserori.vercel.app/?username=VedantJadhav701&theme=radical&no-frame=false&no-bg=true&margin-w=4" alt="GitHub Trophies" width="100%"/>
 
 <br/><br/>
 
-### 📈 Contribution Heatmap & Top Repositories
+### 📈 Contribution Heatmap & Productivity
 
 <table width="100%">
   <tr>
     <td width="60%" align="center">
-      <img src="https://github-readme-activity-graph.vercel.app/graph?username=VedantJadhav701&theme=tokyo-night&hide_border=true&area=true" alt="Contribution Activity Graph" width="100%"/>
+      <img src="https://github-activity-graph.vercel.app/graph?username=VedantJadhav701&theme=tokyo-night&hide_border=true&area=true" alt="Contribution Activity Graph" width="100%"/>
     </td>
     <td width="40%" align="center">
-      <img src="https://github-contributor-stats.vercel.app/api?username=VedantJadhav701&limit=5&theme=dark&combine_all_yearly_contributions=true" alt="Top Contributed Repos" width="100%"/>
+      <img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=VedantJadhav701&theme=dracula" alt="Productive Time" width="100%"/>
     </td>
   </tr>
 </table>
@@ -328,10 +328,8 @@ vedant = {
 
 <br/><br/>
 
-<!-- Visitor Counter & Followers -->
+<!-- Visitor Counter -->
 <img src="https://komarev.com/ghpvc/?username=VedantJadhav701&color=0F6E56&style=for-the-badge&label=Profile+Views" alt="Profile Views" />
-&nbsp;&nbsp;
-<img src="https://img.shields.io/github/followers/VedantJadhav701?style=for-the-badge&color=185FA5&label=Followers" alt="Followers" />
 
 </div>
 
