@@ -277,24 +277,57 @@ vedant = {
 
 <div align="center">
 
-<!-- This card uses the locally updated github-stats script -->
-<a href="https://github.com/VedantJadhav701">
-  <img src="https://raw.githubusercontent.com/VedantJadhav701/VedantJadhav701/main/assets/github-stats.svg" alt="GitHub Stats Card" width="48%" />
-</a>
-<a href="https://github.com/VedantJadhav701">
-  <img src="https://streak-stats.demolab.com/?user=VedantJadhav701&theme=tokyonight&hide_border=true&date_format=j%20M%5B%20Y%5D" alt="GitHub Streak Card" width="48%" />
-</a>
+### 🗃️ Contribution & Activity Metrics
+
+<table width="100%">
+  <tr>
+    <td width="50%" align="center">
+      <img src="https://github-readme-stats.shion.dev/api?username=VedantJadhav701&theme=dracula&hide_border=false&include_all_commits=true&count_private=true" alt="GitHub Stats" width="100%"/>
+    </td>
+    <td width="50%" align="center">
+      <img src="https://github-readme-stats.shion.dev/api/top-langs/?username=VedantJadhav701&theme=dracula&hide_border=false&include_all_commits=true&count_private=true&layout=compact" alt="Top Languages" width="100%"/>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center">
+      <img src="https://streak-stats.demolab.com/?user=VedantJadhav701&theme=dracula&hide_border=false" alt="GitHub Streak" width="100%"/>
+    </td>
+  </tr>
+</table>
+
+<br/>
+
+### 🏆 GitHub Trophies
+<img src="https://github-profile-trophy.vercel.app/?username=VedantJadhav701&theme=radical&no-frame=false&no-bg=true&margin-w=4" alt="GitHub Trophies" width="100%"/>
 
 <br/><br/>
 
-<a href="https://github.com/VedantJadhav701">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=VedantJadhav701&theme=tokyo-night&hide_border=true&area=true" alt="Contribution Activity Graph" width="97%" />
-</a>
+### 📈 Contribution Heatmap & Top Repositories
+
+<table width="100%">
+  <tr>
+    <td width="60%" align="center">
+      <img src="https://github-readme-activity-graph.vercel.app/graph?username=VedantJadhav701&theme=tokyo-night&hide_border=true&area=true" alt="Contribution Activity Graph" width="100%"/>
+    </td>
+    <td width="40%" align="center">
+      <img src="https://github-contributor-stats.vercel.app/api?username=VedantJadhav701&limit=5&theme=dark&combine_all_yearly_contributions=true" alt="Top Contributed Repos" width="100%"/>
+    </td>
+  </tr>
+</table>
+
+<br/>
+
+### 💬 Random Dev Quote
+<img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical" alt="Random Dev Quote" width="100%"/>
 
 <br/><br/>
 
-![Profile Views](https://komarev.com/ghpvc/?username=VedantJadhav701&color=0F6E56&style=for-the-badge&label=Profile+Views)
-![Followers](https://img.shields.io/github/followers/VedantJadhav701?style=for-the-badge&color=185FA5&label=Followers)
+<!-- Visitor Counter & Followers -->
+<a href="https://visitcount.itsvg.in">
+  <img src="https://komarev.com/ghpvc/?username=VedantJadhav701&icon=4&color=4" alt="Profile Views" />
+</a>
+&nbsp;&nbsp;
+<img src="https://img.shields.io/github/followers/VedantJadhav701?style=for-the-badge&color=185FA5&label=Followers" alt="Followers" />
 
 </div>
 
@@ -308,3 +341,4 @@ vedant = {
 **[⬆ Back to top](#)**
 
 </div>
+
