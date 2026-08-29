@@ -329,9 +329,7 @@ vedant = {
 <br/><br/>
 
 <!-- Visitor Counter & Followers -->
-<a href="https://visitcount.itsvg.in">
-  <img src="https://komarev.com/ghpvc/?username=VedantJadhav701&icon=4&color=4" alt="Profile Views" />
-</a>
+<img src="https://komarev.com/ghpvc/?username=VedantJadhav701&color=0F6E56&style=for-the-badge&label=Profile+Views" alt="Profile Views" />
 &nbsp;&nbsp;
 <img src="https://img.shields.io/github/followers/VedantJadhav701?style=for-the-badge&color=185FA5&label=Followers" alt="Followers" />
 
