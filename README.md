@@ -1,4 +1,10 @@
 <div align="center">
+  <img src="./image.png" width="100%" alt="Header Banner"/>
+</div>
+
+<br/>
+
+<div align="center">
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0F6E56,100:185FA5&height=220&section=header&text=Vedant%20Sanjay%20Jadhav&fontSize=42&fontColor=ffffff&fontAlignY=38&desc=AI%20Systems%20Engineer%20%E2%80%A2%20LLM%20Research%20%E2%80%A2%20Agentic%20AI&descAlignY=58&descSize=16&animation=fadeIn" width="100%"/>
 
