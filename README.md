@@ -234,7 +234,7 @@ Researching **efficient, domain-specific AI systems** that run under constrained
 
 <div align="center">
 <img src="https://github-readme-stats.vercel.app/api?username=VedantJadhav701&show_icons=true&theme=transparent&hide_border=true&rank_icon=github" />
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=VedantJadhav701&theme=transparent&hide_border=true" />
+<img src="https://streak-stats.demolab.com/?user=VedantJadhav701&theme=transparent&hide_border=true" />
 </div>
 
 <div align="center">
